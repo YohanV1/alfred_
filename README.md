@@ -1,6 +1,6 @@
 # alfred_ · Execution Decision Layer
 
-**Live URL: _(add after Vercel deploy)_**
+**Live URL: https://yohanandalfred.vercel.app/**
 
 A 6-hour take-home prototype of the decision layer that sits between alfred_ and any action it might take on a user's behalf. Given a proposed action and the conversation context, it picks one of five decisions — **execute silently, execute and notify, confirm, clarify, refuse** — and explains why.
 
@@ -11,8 +11,6 @@ npm install
 echo "ANTHROPIC_API_KEY=sk-ant-..." > .env.local
 npm run dev        # http://localhost:3000
 ```
-
-For production: set `ANTHROPIC_API_KEY` in Vercel project settings, same var name.
 
 ## Architecture
 
@@ -26,7 +24,7 @@ For production: set `ANTHROPIC_API_KEY` in Vercel project settings, same var nam
 │                    │     │   lib/prompt.ts   ──►  system + user prompt    │
 │                    │     │          │                                      │
 │                    │     │          ▼                                      │
-│                    │     │   Anthropic SDK (claude-sonnet-4-5, 20s race)  │
+│                    │     │   Anthropic SDK (claude-sonnet-4-6, 20s race)  │
 │                    │     │          │                                      │
 │                    │     │          ▼                                      │
 │                    │     │   Zod parse (+ 1 retry on malformed)           │

@@ -15,7 +15,7 @@ import type {
   Trace,
 } from "./types";
 
-const MODEL = "claude-sonnet-4-5";
+const MODEL = "claude-sonnet-4-6";
 const TIMEOUT_MS = 20_000;
 
 // Stable refusal messages — centralized so the UI and trace agree on wording.
